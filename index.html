@@ -1,302 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- =====BOX ICONS===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-    <title>Arman's Website</title>
+    <title>Arman Khan - Portfolio</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-    <!--===== HEADER =====-->
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">Arman Khan</a>
-            </div>
+    <!-- Cursor Animation -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#project" class="nav__link">Project</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </div>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__logo">
+            <span>Arman Khan</span>
+        </div>
+        <div class="nav__menu">
+            <ul class="nav__list">
+                <li><a href="#home" class="nav__link active">Home</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#projects" class="nav__link">Projects</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav__theme-toggle">
+            <i class='bx bx-moon'></i>
+        </div>
+    </nav>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
-    </header>
-
-    <main class="l-main">
-        <!--===== HOME =====-->
-        <section class="home bd-grid" id="home">
-            <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Arman Khan</span><br>Computer
-                    Science <br> Student</h1>
-
-                <a href="lastes_arman.pdf" class="button">Download Resume</a>
-            </div>
-
-            <div class="home__social">
-                <a href="http://linkedin.com/in/arman-khan-86409b297
-                    " class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/armankhan8" class="home__social-icon"><i class='bx bxl-github'></i></a>
-
-
-            </div>
-
-            <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <mask id="mask0" mask-type="alpha">
-                        <path
-                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                    </mask>
-                    <g mask="url(#mask0)">
-                        <!-- <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/> -->
-                        <image class="home__blob-img" href="profile-pic 2.png" />
-                    </g>
-                </svg>
-            </div>
-        </section>
-
-        <!--===== ABOUT =====-->
-        <section class="about section " id="about">
-            <h2 class="section-title">About</h2>
-
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="profile-pic (3).png" alt="">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <span class="hero__greeting">
+                    <i class='bx bx-code-alt'></i> Hello World, I'm
+                </span>
+                <h1 class="hero__title">
+                    <span class="highlight">Arman Khan</span>
+                </h1>
+                <div class="hero__text-wrapper">
+                    <h2 class="hero__subtitle">I'm a 
+                        <span class="typed-text"></span>
+                        <span class="cursor">&nbsp;</span>
+                    </h2>
                 </div>
-
-                <div>
-                    <h2 class="about__subtitle">I'am Arman </h2>
-                    <p class="about__text">I am currently a third-year student pursuing a Bachelor's degree in
-                        Technology (B.Tech) in CSE With (DS) at Lloyd Institute Engineering and technology. My academic
-                        focus includes honing my skills in various areas of computer science, with a particular emphasis
-                        on programming language. I am passionate about staying on the cutting edge of technology and
-                        applying my knowledge to real-world problems. I've chosen data science because it's the perfect
-                        blend of my analytical mindset and my desire to explore the world of information, allowing me to
-                        solve real-world problems using data-driven insights.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Eduction -->
-
-        <header>
-            <h1 class="education">Education</h1>
-        </header>
-
-        <section id="education">
-            <h2>School</h2>
-            <h3>10th In 2020, completed 10th | Completed 12th in 2022</h3>
-
-            <h2>College</h2>
-            <h3>Student at LIET | Currently in 2nd Year B.Tech in CSE with Specialization in Data Science</h3>
-            <p>Explore the world of Computer Science with a focus on Data Science and Data Structures.</p>
-        </section>
-
-
-
-        <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Professional Skills</h2>
-                    <p class="skills__text">From C to Python, DSA to web dev technologies like HTML, CSS, and GitHub,
-                        your coding prowess knows no bounds.</p>
-
-                    <!-- <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='iconify boxicons skills__icon' data-icon="logo:java"></i>
-                            <span class="skills__name">Java</span>
-                        </div>
-                    </div> -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='iconify bx--bxl-python skills__icon' data-icon="logos:python"></i>
-                            <span class="skills__name">Python | Pandas | Numpy | Matplotlib </span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bx-data skills__icon'></i>
-                            <span class="skills__name">Data Structures and Algorithms</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML/CSS | Web Development</span>
-                        </div>
-                    </div>
-
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-github skills__icon'></i>
-                            <span class="skills__name">GitHub Action</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxs-paint skills__icon'></i>
-                            <span class="skills__name">Microsoft Excel | Microsoft Word</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <!--===== project =====-->
-        <section class="work section" id="project">
-            <h2 class="namep">Projects Showcase</h2>
-
-            <div class="project">
-                <h3>Predicting Admission Chances Web App!</h3>
-                <p>Project Overview:-
-                   Created a web-based tool to estimate the likelihood of admission to educational institutions based on multiple factors.</p>
-                <p>-Utilizes a trained machine learning model to predict admission chances.</p>
-                <p>-Input form captures key metrics such as GRE score, TOEFL score, university rating, SOP, LOR, CGPA, and research experience.</p>
-                <p>-Provides dynamic and visually appealing result display.</p>
-                <p>Technologies:- 
-                 Flask for backend development, Scikit-Learn for machine learning, HTML/CSS for frontend design.</p>
-                <div class="project-links">
-                    <a href="sorting_visualizer.html" target="_blank">View Demo</a>
-                    <!-- <a href="https://github.com/armankhan8/SortingVisualizerProject" target="_blank">GitHub -->
-                        Repository</a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>Sorting Visualizer</h3>
-                <p>I developed a sorting visualization project in C to demonstrate various sorting algorithms visually. This project showcases step-by-step how sorting works and how numbers are swapped during the sorting process, providing users with a clear understanding of sorting techniques.</p>
-                <p>Implemented sorting algorithms such as Selection Sort, Insertion Sort, Bubble Sort, Merge Sort, Quick
-                    Sort, and Heap Sort.</p>
-                <div class="project-links">
-                    <a href="sorting_visualizer.html" target="_blank">View Demo</a>
-                    <a href="https://github.com/armankhan8/SortingVisualizerProject" target="_blank">GitHub
-                        Repository</a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>Portfolio</h3>
-                <p>An online portfolio showcasing your skills, projects, and achievements.</p>
-                <p>Includes sections such as About Me, Projects Showcase, Contact Information, and Resume.</p>
-                <div class="project-links">
-                    <a href="https://armankhan8.github.io/myWebsite/" target="_blank">View Portfolio</a>
-                    <a href="https://github.com/armankhan8/myWebsite" target="_blank">GitHub Repository</a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>Face Recognition Attendance System</h3>
-                <p>Developed a robust face recognition attendance system utilizing essential
-                    libraries such as cvzone, cv2, and numpy.</p>
-                <p>Integrated Firebase Admin for seamless data management and synchronization,
-                    ensuring efficient tracking and updating of attendance records. </p>
-                <div class="project-links">
-                    <a href="https://armankhan8.github.io/myWebsite/" target="_blank">View</a>
-                    <a href="https://github.com/armankhan8/Face-Recognition-Attendance-System-Project"
-                        target="_blank">GitHub Repository</a>
-                </div>
-            </div>
-            <div class="project">
-                <h3>Modulus Tutors Website</h3>
-                <p>I developed a Modulus website that provides both offline and online tuition services. This website
-                    was created using HTML, CSS, and JavaScript, also with ai tools.
-
+                <p class="hero__description">
+                    Passionate about crafting digital solutions through code. 
+                    Specializing in <span class="highlight">Data Science</span> and 
+                    <span class="highlight">Web Development</span>.
                 </p>
-                <p>Please take a moment to check out the website by following the link below.</p>
-                <div class="project-links">
-                    <a href="https://modulustutor.in" target="_blank">View Website</a>
-                    <!-- <a href="https://github.com/armankhan8/Face-Recognition-Attendance-System-Project" -->
-                        <!-- target="_blank">GitHub Repository</a> -->
-                </div>
-            </div>
-
-        </section>
-
-        <!--===== CONTACT =====-->
-        <section id="contact">
-            <p class="section__text__p1">Get in Touch</p>
-            <h1 class="title">Contact Me</h1>
-            <div class="contact-info-upper-container">
-                <div class="contact-info-container">
-                    <a href="mailto:armaankhan813085@gmail.com">
-                        <img src="OIP.jpeg" alt="Email icon" class="icon contact-icon email-icon" />
+                <div class="hero__cta">
+                    <a href="assets/resume/latest-arman.pdf" class="btn btn-primary">
+                        <i class='bx bx-download'></i> Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class='bx bx-send'></i> Let's Connect
                     </a>
                 </div>
-
-                <div class="contact-info-container">
-                    <a href="https://github.com/armankhan8" target="_blank">
-                        <img src="github_PNG40.png" alt="Github icon" class="icon contact-icon email-icon" />
+                <div class="hero__social">
+                    <a href="https://github.com/armankhan8" target="_blank" class="hero__social-link" title="GitHub">
+                        <i class='bx bxl-github bx-md'></i>
                     </a>
-                </div>
-
-                <div class="contact-info-container">
-                    <a href="https://www.youtube.com/channel/UCb48O_ET-3U0mN_T4M5xhfQ" target="_blank">
-                        <img src="Youtube-Icon-square-2340x2340-2.png" alt="YouTube icon"
-                            class="icon contact-icon utube" />
+                    <a href="http://linkedin.com/in/arman-khan-86409b297" target="_blank" class="hero__social-link" title="LinkedIn">
+                        <i class='bx bxl-linkedin bx-md'></i>
                     </a>
-                </div>
-
-                <div class="contact-info-container">
-                    <a href="https://www.instagram.com/_arman8108" target="_blank">
-                        <img src="OIP (1).jpeg" alt="Instagram icon" class="icon contact-icon insta" />
+                    <a href="https://www.youtube.com/channel/UCb48O_ET-3U0mN_T4M5xhfQ" target="_blank" class="hero__social-link" title="YouTube">
+                        <i class='bx bxl-youtube bx-md'></i>
                     </a>
-                </div>
-
-                <div class="contact-info-container">
-                    <a href="http://linkedin.com/in/arman-khan-86409b297" target="_blank">
-                        <img src="R.jpeg" alt="LinkedIn icon" class="icon contact-icon" />
+                    <a href="#" class="hero__social-link" title="Instagram">
+                        <i class='bx bxl-instagram bx-md'></i>
                     </a>
                 </div>
             </div>
-        </section>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Arman - Computer Science Student</p>
-            <div class="footer__social">
-                <!-- <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a> -->
-                <a href="https://www.instagram.com/_arman8108" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-                <a href="https://twitter.com/Arman8108" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+            <div class="hero__image">
+                <div class="hero__image-wrapper">
+                    <img src="assets/images/profile/profile-pic-2.png" alt="Arman Khan" class="hero__img">
+                    <div class="hero__image-shape"></div>
+                </div>
             </div>
-            <p class="footer__copy">&#169; All rigths reserved</p>
-        </footer>
+        </div>
+        <div class="scroll__down">
+            <span class="scroll__text"></span>
+            <div class="scroll__mouse">
+                <div class="scroll__wheel"></div>
+            </div>
+            <div class="scroll__arrows">
+                <i class='bx bx-chevron-down'></i>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="about" data-scroll>
+        <div class="section__header">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My Journey & Expertise</span>
+        </div>
+        <div class="about__container">
+            <div class="about__image-wrapper">
+                <div class="about__image">
+                    <img src="assets/images/profile/profile-pic-3.png" alt="Arman Khan">
+                    <div class="about__image-shape"></div>
+                </div>
+                <div class="about__image-dots"></div>
+            </div>
+            
+            <div class="about__content">
+                <div class="about__intro">
+                    <h3 class="about__greeting">Who I Am</h3>
+                    <p class="about__text">
+                        I am a passionate Computer Science student at Lloyd Institute Engineering and Technology, 
+                        specializing in <span class="highlight">Data Science</span>. With a strong foundation in 
+                        programming and an innovative mindset, I transform complex problems into elegant solutions.
+                    </p>
+                    <p class="about__text">
+                        My journey in technology is driven by curiosity and the desire to create meaningful impact 
+                        through code. I specialize in <span class="highlight">Python Development</span>, 
+                        <span class="highlight">Data Structures</span>, and <span class="highlight">Web Technologies</span>.
+                    </p>
+                </div>
 
-        <script src="https://unpkg.com/scrollreveal"></script>
+                <div class="about__stats">
+                    <div class="about__box">
+                        <i class='bx bx-award'></i>
+                        <div class="about__box-content">
+                            <h3>Experience</h3>
+                            <span>3+ Years Coding</span>
+                        </div>
+                    </div>
+                    <div class="about__box">
+                        <i class='bx bx-briefcase'></i>
+                        <div class="about__box-content">
+                            <h3>Projects</h3>
+                            <span>10+ Completed</span>
+                        </div>
+                    </div>
+                    <div class="about__box">
+                        <i class='bx bx-book-bookmark'></i>
+                        <div class="about__box-content">
+                            <h3>Education</h3>
+                            <span>B.Tech CSE (DS)</span>
+                        </div>
+                    </div>
+                </div>
 
-        <!--===== MAIN JS =====-->
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const navToggle = document.getElementById('nav-toggle');
-                const navMenu = document.getElementById('nav-menu');
+                <!-- About Section Education Area -->
+                <div class="about__education-container">
+                    <div class="about__education">
+                        <h3 class="about__subtitle">Educational Background</h3>
+                        <div class="education__timeline">
+                            <div class="timeline__item">
+                                <div class="timeline__content">
+                                    <span class="timeline__year">2021 - Present</span>
+                                    <h4>B.Tech in CSE (Data Science)</h4>
+                                    <p>Lloyd Institute of Engineering and Technology</p>
+                                </div>
+                            </div>
+                            <div class="timeline__item">
+                                <div class="timeline__content">
+                                    <span class="timeline__year">2022</span>
+                                    <h4>Higher Secondary Education</h4>
+                                    <p>12th Standard</p>
+                                </div>
+                            </div>
+                            <div class="timeline__item">
+                                <div class="timeline__content">
+                                    <span class="timeline__year">2020</span>
+                                    <h4>Secondary Education</h4>
+                                    <p>10th Standard</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                navToggle.addEventListener('click', function () {
-                    navMenu.classList.toggle('show');
-                });
-            });
-        </script>
+    <!-- Skills Section -->
+    <section id="skills" class="skills" data-scroll>
+        <div class="section__header">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My Technical Expertise</span>
+        </div>
+        <div class="skills__container">
+            <div class="skills__group">
+                <!-- Programming & Data Science -->
+                <div class="skills__card">
+                    <i class='bx bx-data'></i>
+                    <h3>Programming & Data Science</h3>
+                    <ul class="skills__list">
+                        <li><i class='bx bxl-python'></i> Python (Pandas, NumPy, Matplotlib)</li>
+                        <li><i class='bx bx-code-alt'></i> Data Structures & Algorithms</li>
+                        <li><i class='bx bx-brain'></i> Machine Learning Beginner</li>
+                        <li><i class='bx bx-line-chart'></i> Data Analysis Beginner</li>
+                        <li><i class='bx bx-stats'></i> Statistical Analysis Beginner</li>
+                        <li><i class='bx bxl-c-plus-plus'></i> C Programming</li>
+                    </ul>
+                </div>
+
+                <!-- Web Development Using AI Tools -->
+                <div class="skills__card">
+                    <i class='bx bx-code-block'></i>
+                    <h3>Web Development Using AI Tools</h3>
+                    <ul class="skills__list">
+                        <li><i class='bx bxl-html5'></i> HTML5/CSS3</li>
+                        <li><i class='bx bxl-javascript'></i> JavaScript</li>
+                        <li><i class='bx bxl-react'></i> React.js</li>
+                        <li><i class='bx bx-palette'></i> Web Design</li>
+                        <li><i class='bx bx-devices'></i> Responsive Development</li>
+                        <li><i class='bx bxl-git'></i> Version Control (Git)</li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Software -->
+                <div class="skills__card">
+                    <i class='bx bx-terminal'></i>
+                    <h3>Tools & Software</h3>
+                    <ul class="skills__list">
+                        <li><i class='bx bx-table'></i> Microsoft Excel</li>
+                        <li><i class='bx bx-file'></i> Microsoft Word</li>
+                        <li><i class='bx bxl-github'></i> GitHub</li>
+                        <li><i class='bx bx-code-curly'></i> VS Code</li>
+                        <li><i class='bx bx-notebook'></i> Jupyter Notebook</li>
+                        <li><i class='bx bxl-firebase'></i> Firebase</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects" data-scroll>
+        <div class="section__header">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">Recent Work</span>
+        </div>
+        <div class="projects__container">
+            <!-- Admission Predictor -->
+            <article class="project__card">
+                <div class="project__image">
+                    <img src="https://img.freepik.com/free-vector/gradient-machine-learning-infographic_23-2149379688.jpg" alt="Admission Predictor">
+                    <div class="project__overlay">
+                        <i class='bx bx-link-external'></i>
+                    </div>
+                </div>
+                <div class="project__content">
+                    <h3>
+                        <i class='bx bx-brain'></i>
+                        Admission Predictor
+                    </h3>
+                    <p>ML-based admission prediction system</p>
+                    <div class="project__tech-stack">
+                        <span><i class='bx bxl-python'></i> Python</span>
+                        <span><i class='bx bxl-flask'></i> Flask</span>
+                    </div>
+                    <div class="project__links">
+                        <a href="#" class="btn btn-sm">Demo</a>
+                        <a href="#" class="btn btn-sm btn-outline">Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Sorting Visualizer -->
+            <article class="project__card">
+                <div class="project__image">
+                    <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg" alt="Sorting Visualizer">
+                    <div class="project__overlay">
+                        <i class='bx bx-link-external'></i>
+                    </div>
+                </div>
+                <div class="project__content">
+                    <h3>
+                        <i class='bx bx-sort-alt-2'></i>
+                        Sorting Visualizer
+                    </h3>
+                    <p>Interactive sorting algorithm visualization</p>
+                    <div class="project__tech-stack">
+                        <span><i class='bx bxl-c-plus-plus'></i> C++</span>
+                        <span><i class='bx bx-code-block'></i> DSA</span>
+                    </div>
+                    <div class="project__links">
+                        <a href="#" class="btn btn-sm">Demo</a>
+                        <a href="#" class="btn btn-sm btn-outline">Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Face Recognition -->
+            <article class="project__card">
+                <div class="project__image">
+                    <img src="https://img.freepik.com/free-vector/facial-recognition-concept-illustration_114360-7072.jpg" alt="Face Recognition">
+                    <div class="project__overlay">
+                        <i class='bx bx-link-external'></i>
+                    </div>
+                </div>
+                <div class="project__content">
+                    <h3>
+                        <i class='bx bx-face'></i>
+                        Face Recognition
+                    </h3>
+                    <p>Automated attendance tracking system</p>
+                    <div class="project__tech-stack">
+                        <span><i class='bx bxl-python'></i> Python</span>
+                        <span><i class='bx bxl-firebase'></i> Firebase</span>
+                    </div>
+                    <div class="project__links">
+                        <a href="#" class="btn btn-sm">Demo</a>
+                        <a href="#" class="btn btn-sm btn-outline">Code</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Modulus Tutors -->
+            <article class="project__card">
+                <div class="project__image">
+                    <img src="https://img.freepik.com/free-vector/online-tutorials-concept_23-2148529397.jpg" alt="Modulus Tutors">
+                    <div class="project__overlay">
+                        <i class='bx bx-link-external'></i>
+                    </div>
+                </div>
+                <div class="project__content">
+                    <h3>
+                        <i class='bx bx-book-reader'></i>
+                        Modulus Tutors
+                    </h3>
+                    <p>Online tutoring platform</p>
+                    <div class="project__tech-stack">
+                        <span><i class='bx bxl-html5'></i> HTML</span>
+                        <span><i class='bx bxl-css3'></i> CSS</span>
+                    </div>
+                    <div class="project__links">
+                        <a href="https://modulustutor.in" class="btn btn-sm">Visit</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" data-scroll>
+        <div class="section__header">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get In Touch</span>
+        </div>
+        <div class="contact__container">
+            <div class="contact__content">
+                <h3 class="contact__title">Let's Talk About Your Project</h3>
+                <p class="contact__description">
+                    I'm always interested in hearing about new projects and opportunities.
+                    Whether you have a question or just want to say hi, I'll try my best
+                    to get back to you!
+                </p>
+            </div>
+            <div class="contact__info">
+                <div class="contact__card">
+                    <i class='bx bx-mail-send'></i>
+                    <h3>Email</h3>
+                    <span>armaankhan813085@gmail.com</span>
+                    <a href="mailto:armaankhan813085@gmail.com" class="contact__button">
+                        Write me <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+                <div class="contact__card">
+                    <i class='bx bxl-linkedin'></i>
+                    <h3>LinkedIn</h3>
+                    <span>Arman Khan</span>
+                    <a href="http://linkedin.com/in/arman-khan-86409b297" target="_blank" class="contact__button">
+                        Connect <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+                <div class="contact__card">
+                    <i class='bx bxl-github'></i>
+                    <h3>GitHub</h3>
+                    <span>@armankhan8</span>
+                    <a href="https://github.com/armankhan8" target="_blank" class="contact__button">
+                        Follow <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__bg"></div>
+        <div class="footer__container">
+            <div class="footer__grid">
+                <div class="footer__content">
+                    <div class="footer__brand">
+                        <h3 class="footer__title">Arman Khan</h3>
+                        <p class="footer__subtitle">Computer Science Student</p>
+                    </div>
+                    <p class="footer__description">
+                        Passionate about creating innovative solutions through code. 
+                        Specializing in Data Science and Web Development.
+                    </p>
+                </div>
+
+                <div class="footer__links">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__list">
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#skills" class="footer__link">Skills</a></li>
+                        <li><a href="#projects" class="footer__link">Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <div class="footer__info">
+                        <div class="footer__info-item">
+                            <i class='bx bx-envelope'></i>
+                            <a href="mailto:armaankhan813085@gmail.com">armaankhan813085@gmail.com</a>
+                        </div>
+                        <div class="footer__info-item">
+                            <i class='bx bxl-github'></i>
+                            <a href="https://github.com/armankhan8" target="_blank">github.com/armankhan8</a>
+                        </div>
+                        <div class="footer__info-item">
+                            <i class='bx bxl-linkedin-square'></i>
+                            <a href="http://linkedin.com/in/arman-khan-86409b297" target="_blank">linkedin.com/in/arman-khan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__social">
+                    <a href="https://github.com/armankhan8" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-github bx-sm'></i>
+                    </a>
+                    <a href="http://linkedin.com/in/arman-khan-86409b297" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-linkedin bx-sm'></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCb48O_ET-3U0mN_T4M5xhfQ" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-youtube bx-sm'></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class='bx bxl-instagram bx-sm'></i>
+                    </a>
+                </div>
+                <p class="footer__copy">
+                    © 2024 Arman Khan. All rights reserved
+                    <span class="footer__dot">•</span>
+                    Designed with <i class='bx bxs-heart'></i> by Arman
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="js/main.js"></script>
 </body>
-
 </html>
