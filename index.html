@@ -34,7 +34,10 @@
             </ul>
         </div>
         <div class="nav__theme-toggle">
-            <i class='bx bx-moon'></i>
+            <button class="theme-toggle" id="darkModeToggle">
+                <i class='bx bx-moon'></i>
+                <i class='bx bx-sun'></i>
+            </button>
         </div>
     </nav>
 
@@ -42,9 +45,6 @@
     <section id="home" class="hero">
         <div class="hero__container">
             <div class="hero__content">
-                <span class="hero__greeting">
-                    <i class='bx bx-code-alt'></i> Hello World, I'm
-                </span>
                 <h1 class="hero__title">
                     <span class="highlight">Arman Khan</span>
                 </h1>
@@ -55,13 +55,13 @@
                     </h2>
                 </div>
                 <p class="hero__description">
-                    Passionate about crafting digital solutions through code. 
-                    Specializing in <span class="highlight">Data Science</span> and 
-                    <span class="highlight">Web Development</span>.
+                    A passionate computer science student specializing in Data Science, focused on creating innovative solutions and exploring cutting-edge technologies.
+                    <span class="highlight"></span>
+                    <span class="highlight"></span>.
                 </p>
                 <div class="hero__cta">
-                    <a href="assets/resume/latest-arman.pdf" class="btn btn-primary">
-                        <i class='bx bx-download'></i> Download CV
+                    <a href="ArmanResumeMain.pdf" class="btn btn-primary">
+                        <i class='bx bx-download'></i> Download Resume
                     </a>
                     <a href="#contact" class="btn btn-outline">
                         <i class='bx bx-send'></i> Let's Connect
@@ -74,119 +74,86 @@
                     <a href="http://linkedin.com/in/arman-khan-86409b297" target="_blank" class="hero__social-link" title="LinkedIn">
                         <i class='bx bxl-linkedin bx-md'></i>
                     </a>
-                    <a href="https://www.youtube.com/channel/UCb48O_ET-3U0mN_T4M5xhfQ" target="_blank" class="hero__social-link" title="YouTube">
-                        <i class='bx bxl-youtube bx-md'></i>
-                    </a>
-                    <a href="#" class="hero__social-link" title="Instagram">
-                        <i class='bx bxl-instagram bx-md'></i>
-                    </a>
-                </div>
-            </div>
-            <div class="hero__image">
-                <div class="hero__image-wrapper">
-                    <img src="assets/images/profile/profile-pic-2.png" alt="Arman Khan" class="hero__img">
-                    <div class="hero__image-shape"></div>
+                  
                 </div>
             </div>
         </div>
-        <div class="scroll__down">
-            <span class="scroll__text"></span>
-            <div class="scroll__mouse">
-                <div class="scroll__wheel"></div>
-            </div>
-            <div class="scroll__arrows">
-                <i class='bx bx-chevron-down'></i>
-                <i class='bx bx-chevron-down'></i>
-            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about" data-scroll>
-        <div class="section__header">
-            <h2 class="section__title">About Me</h2>
-            <span class="section__subtitle">My Journey & Expertise</span>
-        </div>
-        <div class="about__container">
+    <!-- About Section -->
+<section id="about" class="about" data-scroll>
+    <div class="section__header">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle">Passionate computer science student with a focus on data science and modern web technologies.</span>
+    </div>
+    <div class="about__container">
+        <!-- Left Side - Image and Text -->
+        <div class="about__left">
             <div class="about__image-wrapper">
-                <div class="about__image">
-                    <img src="assets/images/profile/profile-pic-3.png" alt="Arman Khan">
-                    <div class="about__image-shape"></div>
-                </div>
-                <div class="about__image-dots"></div>
+                <img src="css/kk.jpg" alt="Arman Khan" class="about__image">
             </div>
-            
-            <div class="about__content">
-                <div class="about__intro">
-                    <h3 class="about__greeting">Who I Am</h3>
-                    <p class="about__text">
-                        I am a passionate Computer Science student at Lloyd Institute Engineering and Technology, 
-                        specializing in <span class="highlight">Data Science</span>. With a strong foundation in 
-                        programming and an innovative mindset, I transform complex problems into elegant solutions.
-                    </p>
-                    <p class="about__text">
-                        My journey in technology is driven by curiosity and the desire to create meaningful impact 
-                        through code. I specialize in <span class="highlight">Python Development</span>, 
-                        <span class="highlight">Data Structures</span>, and <span class="highlight">Web Technologies</span>.
-                    </p>
-                </div>
+            <p class="about__text">
+                I am currently a third-year student pursuing a Bachelor's degree in Technology (B.Tech) in CSE with Data Science specialization at Lloyd Institute Engineering and Technology. My academic focus includes honing my skills in various areas of computer science, with a particular emphasis on programming and data science.
+            </p>
+        </div>
 
-                <div class="about__stats">
-                    <div class="about__box">
-                        <i class='bx bx-award'></i>
-                        <div class="about__box-content">
-                            <h3>Experience</h3>
-                            <span>3+ Years Coding</span>
-                        </div>
+        <!-- Right Side - Education and Skills -->
+        <div class="about__right">
+            <!-- Education Section -->
+            <div class="education">
+                <h3 class="education__title">Education</h3>
+                <div class="education__items">
+                    <div class="education__item">
+                        <h4>B.Tech in CSE (Data Science)</h4>
+                        <p>Lloyd Institute Engineering and Technology | Current</p>
                     </div>
-                    <div class="about__box">
-                        <i class='bx bx-briefcase'></i>
-                        <div class="about__box-content">
-                            <h3>Projects</h3>
-                            <span>10+ Completed</span>
-                        </div>
+                    <div class="education__item">
+                        <h4>Higher Secondary Education</h4>
+                        <p>Completed 12th in 2022</p>
                     </div>
-                    <div class="about__box">
-                        <i class='bx bx-book-bookmark'></i>
-                        <div class="about__box-content">
-                            <h3>Education</h3>
-                            <span>B.Tech CSE (DS)</span>
-                        </div>
+                    <div class="education__item">
+                        <h4>Secondary Education</h4>
+                        <p>Completed 10th in 2020</p>
                     </div>
                 </div>
+            </div>
 
-                <!-- About Section Education Area -->
-                <div class="about__education-container">
-                    <div class="about__education">
-                        <h3 class="about__subtitle">Educational Background</h3>
-                        <div class="education__timeline">
-                            <div class="timeline__item">
-                                <div class="timeline__content">
-                                    <span class="timeline__year">2021 - Present</span>
-                                    <h4>B.Tech in CSE (Data Science)</h4>
-                                    <p>Lloyd Institute of Engineering and Technology</p>
-                                </div>
-                            </div>
-                            <div class="timeline__item">
-                                <div class="timeline__content">
-                                    <span class="timeline__year">2022</span>
-                                    <h4>Higher Secondary Education</h4>
-                                    <p>12th Standard</p>
-                                </div>
-                            </div>
-                            <div class="timeline__item">
-                                <div class="timeline__content">
-                                    <span class="timeline__year">2020</span>
-                                    <h4>Secondary Education</h4>
-                                    <p>10th Standard</p>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Skills Grid -->
+            <div class="skills__grid">
+                <div class="skill__card">
+                    <div class="skill__icon">
+                        <i class='bx bx-code-alt'></i>
                     </div>
+                    <h4>Clean Code</h4>
+                    <p>Writing maintainable & efficient code</p>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">
+                        <i class='bx bx-brain'></i>
+                    </div>
+                    <h4>Data Science</h4>
+                    <p>Analytics & Machine Learning</p>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">
+                        <i class='bx bx-laptop'></i>
+                    </div>
+                    <h4>Web Dev</h4>
+                    <p>Modern web technologies</p>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">
+                        <i class='bx bx-bolt'></i>
+                    </div>
+                    <h4>Quick Learner</h4>
+                    <p>Adaptable to new technologies</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills" data-scroll>
@@ -244,110 +211,72 @@
     <!-- Projects Section -->
     <section id="projects" class="projects" data-scroll>
         <div class="section__header">
-            <h2 class="section__title">Projects</h2>
-            <span class="section__subtitle">Recent Work</span>
+            <h2 class="section__title">Featured Projects</h2>
+            <span class="section__subtitle">A showcase of my technical projects and achievements in software development.</span>
         </div>
-        <div class="projects__container">
-            <!-- Admission Predictor -->
+        <div class="projects__grid">
             <article class="project__card">
                 <div class="project__image">
-                    <img src="https://img.freepik.com/free-vector/gradient-machine-learning-infographic_23-2149379688.jpg" alt="Admission Predictor">
-                    <div class="project__overlay">
-                        <i class='bx bx-link-external'></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" alt="Admission Predictor">
                 </div>
                 <div class="project__content">
-                    <h3>
-                        <i class='bx bx-brain'></i>
-                        Admission Predictor
-                    </h3>
-                    <p>ML-based admission prediction system</p>
-                    <div class="project__tech-stack">
-                        <span><i class='bx bxl-python'></i> Python</span>
-                        <span><i class='bx bxl-flask'></i> Flask</span>
-                    </div>
-                    <div class="project__links">
-                        <a href="#" class="btn btn-sm">Demo</a>
-                        <a href="#" class="btn btn-sm btn-outline">Code</a>
+                    <h3>Admission Predictor Web App</h3>
+                    <p>Web-based tool to estimate admission chances using machine learning, featuring GRE, TOEFL, and other academic metrics.</p>
+                    <div class="project__tags">
+                        <span class="project__tag">Flask</span>
+                        <span class="project__tag">Scikit-Learn</span>
+                        <span class="project__tag">HTML/CSS</span>
                     </div>
                 </div>
             </article>
-
-            <!-- Sorting Visualizer -->
+    
             <article class="project__card">
                 <div class="project__image">
-                    <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg" alt="Sorting Visualizer">
-                    <div class="project__overlay">
-                        <i class='bx bx-link-external'></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Sorting Visualizer">
                 </div>
                 <div class="project__content">
-                    <h3>
-                        <i class='bx bx-sort-alt-2'></i>
-                        Sorting Visualizer
-                    </h3>
-                    <p>Interactive sorting algorithm visualization</p>
-                    <div class="project__tech-stack">
-                        <span><i class='bx bxl-c-plus-plus'></i> C++</span>
-                        <span><i class='bx bx-code-block'></i> DSA</span>
-                    </div>
-                    <div class="project__links">
-                        <a href="#" class="btn btn-sm">Demo</a>
-                        <a href="#" class="btn btn-sm btn-outline">Code</a>
+                    <h3>Sorting Visualizer</h3>
+                    <p>Interactive visualization of various sorting algorithms including Selection, Insertion, Bubble, Merge, Quick, and Heap Sort.</p>
+                    <div class="project__tags">
+                        <span class="project__tag">C</span>
+                        <span class="project__tag">Algorithms</span>
+                        <span class="project__tag">Data Structures</span>
                     </div>
                 </div>
             </article>
-
-            <!-- Face Recognition -->
+    
             <article class="project__card">
                 <div class="project__image">
-                    <img src="https://img.freepik.com/free-vector/facial-recognition-concept-illustration_114360-7072.jpg" alt="Face Recognition">
-                    <div class="project__overlay">
-                        <i class='bx bx-link-external'></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a" alt="Face Recognition">
                 </div>
                 <div class="project__content">
-                    <h3>
-                        <i class='bx bx-face'></i>
-                        Face Recognition
-                    </h3>
-                    <p>Automated attendance tracking system</p>
-                    <div class="project__tech-stack">
-                        <span><i class='bx bxl-python'></i> Python</span>
-                        <span><i class='bx bxl-firebase'></i> Firebase</span>
-                    </div>
-                    <div class="project__links">
-                        <a href="#" class="btn btn-sm">Demo</a>
-                        <a href="#" class="btn btn-sm btn-outline">Code</a>
+                    <h3>Face Recognition Attendance</h3>
+                    <p>Advanced attendance system using face recognition with Firebase integration for real-time tracking.</p>
+                    <div class="project__tags">
+                        <span class="project__tag">Python</span>
+                        <span class="project__tag">OpenCV</span>
+                        <span class="project__tag">Firebase</span>
                     </div>
                 </div>
             </article>
-
-            <!-- Modulus Tutors -->
+    
             <article class="project__card">
                 <div class="project__image">
-                    <img src="https://img.freepik.com/free-vector/online-tutorials-concept_23-2148529397.jpg" alt="Modulus Tutors">
-                    <div class="project__overlay">
-                        <i class='bx bx-link-external'></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Modulus Tutors">
                 </div>
                 <div class="project__content">
-                    <h3>
-                        <i class='bx bx-book-reader'></i>
-                        Modulus Tutors
-                    </h3>
-                    <p>Online tutoring platform</p>
-                    <div class="project__tech-stack">
-                        <span><i class='bx bxl-html5'></i> HTML</span>
-                        <span><i class='bx bxl-css3'></i> CSS</span>
-                    </div>
-                    <div class="project__links">
-                        <a href="https://modulustutor.in" class="btn btn-sm">Visit</a>
+                    <h3>Modulus Tutors Website</h3>
+                    <p>Professional website for online and offline tuition services with modern design and functionality.</p>
+                    <div class="project__tags">
+                        <span class="project__tag">HTML</span>
+                        <span class="project__tag">CSS</span>
+                        <span class="project__tag">JavaScript</span>
                     </div>
                 </div>
             </article>
         </div>
     </section>
+    
 
     <!-- Contact Section -->
     <section id="contact" class="contact" data-scroll>
@@ -388,6 +317,14 @@
                     <a href="https://github.com/armankhan8" target="_blank" class="contact__button">
                         Follow <i class='bx bx-right-arrow-alt'></i>
                     </a>
+                </div>
+                <div class="contact__card">
+                    <i class='bx bx-envelope-open'></i>
+                    <h3>Enquiry</h3>
+                    <span>Fill Form</span>
+                    <button class="contact__button" id="openEnquiryForm">
+                        Write Now <i class='bx bx-right-arrow-alt'></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -461,8 +398,47 @@
             </div>
         </div>
     </footer>
-
-    <!-- JS Files -->
     <script src="js/main.js"></script>
+
+    <div class="enquiry-modal" id="enquiryModal">
+        <div class="enquiry-modal__content">
+            <button class="enquiry-modal__close" id="closeModal">
+                <i class='bx bx-x'></i>
+            </button>
+            <h3>Send me a message</h3>
+            <form class="enquiry-form" id="enquiryForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">What U make Want? Please Describe</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                    Send Message <i class='bx bx-send'></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    </script>
+
+    <!-- Your Scripts -->
+    <script type="module" src="js/enquiryForm.js"></script>
 </body>
 </html>

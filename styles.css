@@ -202,6 +202,7 @@ img {
   font-size: 1.5rem;
   font-weight: 700;
   background: var(--gradient-1);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -313,6 +314,8 @@ img {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
 }
+
+
 
 /* ===== ABOUT =====*/
 .section-title{
@@ -826,4 +829,73 @@ footer p {
 
 .home__data, .home__img, .skills__data, .project {
     animation: fadeIn 1s ease-out forwards;
+}
+
+/* Add these dark mode styles to your CSS */
+.nav__theme-toggle {
+    margin-left: 1rem;
+    z-index: 100;
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #f1f5f9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle i {
+    font-size: 1.4rem;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle .bx-sun {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.theme-toggle .bx-moon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Dark Theme Colors */
+body.dark-theme {
+    --bg-color: #0f172a;
+    --bg-alt: #1e293b;
+    --text-color: #f8fafc;
+    --text-light: #94a3b8;
+    --text-dark: #f1f5f9;
+    background: var(--bg-color);
+}
+
+body.dark-theme .nav {
+    background: rgba(15, 23, 42, 0.95);
+}
+
+body.dark-theme .theme-toggle {
+    background: #1e293b;
+}
+
+body.dark-theme .theme-toggle .bx-sun {
+    opacity: 1;
+    transform: scale(1);
+    color: #fbbf24;
+}
+
+body.dark-theme .theme-toggle .bx-moon {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
 }

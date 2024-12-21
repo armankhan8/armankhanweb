@@ -92,7 +92,12 @@ window.addEventListener('scroll', scrollActive);
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Computer Science Student", "Data Science Enthusiast", "Web Developer", "Problem Solver"];
+const textArray = [
+    "Computer Science Student", 
+    "Data Science Enthusiast",
+    "Problem Solver" ,
+    "Web Developer"
+];
 const typingDelay = 100;
 const erasingDelay = 50;
 const newTextDelay = 2000;
@@ -129,4 +134,55 @@ function erase() {
 
 document.addEventListener("DOMContentLoaded", function() {
     if(textArray.length) setTimeout(type, newTextDelay + 250);
+}); 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Check for saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-theme');
+    }
+
+    // Toggle theme on click
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+        localStorage.setItem('theme', 
+            body.classList.contains('dark-theme') ? 'dark' : 'light'
+        );
+    });
+}); 
+
+// Enquiry Form Modal
+document.addEventListener('DOMContentLoaded', () => {
+    const openButton = document.getElementById('openEnquiryForm');
+    const modal = document.getElementById('enquiryModal');
+    const closeButton = document.getElementById('closeModal');
+    const form = document.getElementById('enquiryForm');
+
+    openButton.addEventListener('click', () => {
+        modal.classList.add('active');
+    });
+
+    closeButton.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+
+    // Handle form submission
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        alert('Message sent successfully!');
+        modal.classList.remove('active');
+        form.reset();
+    });
 }); 
