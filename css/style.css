@@ -30,6 +30,9 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
     --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.12);
+
+    /* Add this with your other variables */
+    --header-height: 4.5rem;
 }
 
 body {
@@ -1881,4 +1884,149 @@ body.dark-theme .form-group textarea {
     background: var(--bg-color);
     border-color: rgba(255, 255, 255, 0.1);
     color: var(--text-color);
+}
+
+/* Mobile Menu Styles */
+.nav__toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-dark);
+    z-index: 200;
+}
+
+/* Show toggle button on mobile */
+@media screen and (max-width: 768px) {
+    .nav {
+        height: var(--header-height);
+        padding: 0 1rem;
+    }
+
+    .nav__toggle {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Side drawer menu */
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start from outside the screen */
+        width: 70%; /* Width of the side drawer */
+        height: 100vh; /* Full height */
+        background: var(--bg-color);
+        padding: 4.5rem 2rem 2rem;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: 0.4s ease-in-out;
+        z-index: 100;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    /* Show menu class */
+    .nav__menu.show-menu {
+        right: 0; /* Slide in from right */
+    }
+
+    /* Add overlay when menu is open */
+    .nav__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease;
+        z-index: 99;
+    }
+
+    .show-menu-overlay .nav__overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Adjust nav layout */
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+    }
+
+    .nav__logo {
+        font-size: 1.2rem;
+    }
+
+    .nav__theme-toggle {
+        margin-left: 1rem;
+    }
+
+    /* Style nav links */
+    .nav__link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.1rem;
+        padding: 0.8rem 0;
+    }
+
+    .nav__link i {
+        font-size: 1.4rem;
+    }
+}
+
+/* Dark theme support */
+body.dark-theme .nav__menu {
+    background: var(--bg-alt);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .nav__toggle {
+    color: var(--text-color);
+}
+
+/* Hero CTA buttons spacing */
+.hero__cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+    .hero__cta {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 2rem auto;
+    }
+
+    .hero__cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Button styles update */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary, .btn-outline {
+    min-width: 180px;
+    justify-content: center;
 }
