@@ -93,7 +93,7 @@ const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
 const textArray = [
-    "Computer Science Student", 
+    "ComputerScience Student", 
     "Data Science Enthusiast",
     "Problem Solver" ,
     "Web Developer"
