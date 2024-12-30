@@ -456,5 +456,35 @@
 
     <!-- Your Scripts -->
     <script type="module" src="js/enquiryForm.js"></script>
+    <script src="js/chat.js"></script>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-widget__toggle" id="chatToggle">
+            <i class='bx bx-message-rounded-dots'></i>
+        </button>
+        <div class="chat-widget__container">
+            <div class="chat-widget__header">
+                <h3>Chat with AI Assistant</h3>
+                <button class="chat-widget__close" id="chatClose">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="chat-widget__messages" id="chatMessages">
+                <div class="chat-message chat-message--bot">
+                    <i class='bx bx-bot'></i>
+                    <div class="chat-message__content">
+                        Hi! I'm Arman's AI assistant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+            <form class="chat-widget__input" id="chatForm">
+                <input type="text" placeholder="Type your message..." id="chatInput" required>
+                <button type="submit">
+                    <i class='bx bx-send'></i>
+                </button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
