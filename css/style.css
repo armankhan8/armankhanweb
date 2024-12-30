@@ -264,7 +264,7 @@ img {
 .hero__social-link i {
     position: relative;
     z-index: 2;
-    color: white; /* Ensure icon stays white */
+    color: white;
     transition: all 0.3s ease;
 }
 
@@ -289,6 +289,18 @@ img {
 }
 
 .hero__social-link[href*="github"]:hover i {
+    color: white;
+}
+
+/* LeetCode hover */
+.hero__social-link[href*="leetcode"]:hover {
+    background: #FFA116;
+    border-color: #FFA116;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 161, 22, 0.4);
+}
+
+.hero__social-link[href*="leetcode"]:hover i {
     color: white;
 }
 
