@@ -1,104 +1,116 @@
+// Import Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
+// Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCl4v4Ug78YXyq_y-KfWGnhRX-Pahrb2HU",
     authDomain: "tutorial-project-ecf1e.firebaseapp.com",
     databaseURL: "https://tutorial-project-ecf1e-default-rtdb.firebaseio.com",
     projectId: "tutorial-project-ecf1e",
-    storageBucket: "tutorial-project-ecf1e.firebasestorage.app",
+    storageBucket: "tutorial-project-ecf1e.appspot.com",
     messagingSenderId: "712917386489",
-    appId: "1:712917386489:web:8df101b3743d470c6e4e28"
+    appId: "1:712917386489:web:8df101b3743d470c6e4e28",
+    measurementId: "G-VE6N83J1W4"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const rtdb = getDatabase(app);
+const db = getDatabase(app);
+console.log("✅ Firebase Initialized Successfully!");
 
-class EnquiryForm {
-    constructor() {
-        console.log('Initializing form...');
-        this.modal = document.getElementById('enquiryModal');
-        this.form = document.getElementById('enquiryForm');
-        this.openButton = document.getElementById('openEnquiryForm');
-        this.closeButton = document.getElementById('closeModal');
-        
-        // Form fields
-        this.fields = {
-            name: document.getElementById('name'),
-            email: document.getElementById('email'),
-            subject: document.getElementById('subject'),
-            message: document.getElementById('message')
-        };
+// Form elements
+const form = document.getElementById("enquiryForm");
+const modal = document.getElementById("enquiryModal");
+const openButton = document.getElementById("openEnquiryForm");
+const closeButton = document.getElementById("closeModal");
 
-        this.addEventListeners();
-        console.log('Form initialized');
+// Form fields
+const nameField = document.getElementById("name");
+const emailField = document.getElementById("email");
+const subjectField = document.getElementById("subject");
+const messageField = document.getElementById("message");
+
+// Open modal
+openButton.addEventListener("click", () => {
+    modal.classList.add("active");
+});
+
+// Close modal
+closeButton.addEventListener("click", () => {
+    modal.classList.remove("active");
+    form.reset();
+});
+
+// Validate form
+function validateForm() {
+    if (!nameField.value.trim()) {
+        alert("Please enter your name");
+        return false;
     }
-
-    addEventListeners() {
-        console.log('Adding event listeners...');
-        this.openButton.addEventListener('click', () => {
-            console.log('Opening modal');
-            this.openModal();
-        });
-
-        this.closeButton.addEventListener('click', () => {
-            console.log('Closing modal');
-            this.closeModal();
-        });
-
-        this.form.addEventListener('submit', (e) => {
-            console.log('Form submitted');
-            this.handleSubmit(e);
-        });
+    if (!emailField.value.trim()) {
+        alert("Please enter your email");
+        return false;
     }
-
-    openModal() {
-        this.modal.classList.add('active');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
+        alert("Invalid email format");
+        return false;
     }
-
-    closeModal() {
-        this.modal.classList.remove('active');
-        this.form.reset();
+    if (!subjectField.value.trim()) {
+        alert("Please enter a subject");
+        return false;
     }
-
-    async handleSubmit(e) {
-        e.preventDefault();
-        console.log('Processing form submission...');
-
-        const formData = {
-            name: this.fields.name.value,
-            email: this.fields.email.value,
-            subject: this.fields.subject.value,
-            message: this.fields.message.value,
-            timestamp: new Date().toISOString()
-        };
-
-        console.log('Form data:', formData);
-
-        try {
-            // Save to Firestore
-            const docRef = await addDoc(collection(db, 'enquiries'), formData);
-            console.log('Saved to Firestore:', docRef.id);
-
-            // Save to Realtime Database
-            const dbRef = ref(rtdb, 'enquiries/' + docRef.id);
-            await set(dbRef, formData);
-            console.log('Saved to Realtime Database');
-
-            alert('Message sent successfully!');
-            this.closeModal();
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Error sending message: ' + error.message);
-        }
+    if (!messageField.value.trim()) {
+        alert("Please enter a message");
+        return false;
     }
+    return true;
 }
 
-// Initialize form
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded, creating form...');
-    window.enquiryForm = new EnquiryForm();
-}); 
+// Prevent Multiple Submissions
+let isSubmitting = false;
+
+// Form submit event
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (isSubmitting) {
+        console.warn("⚠ Form is already submitting, please wait...");
+        return;
+    }
+    isSubmitting = true; // Prevent duplicate submissions
+
+    console.log("📌 Form submission started...");
+
+    if (!validateForm()) {
+        console.log("❌ Validation failed, form not submitted.");
+        isSubmitting = false; // Reset flag if validation fails
+        return;
+    }
+
+    const formData = {
+        name: nameField.value.trim(),
+        email: emailField.value.trim(),
+        subject: subjectField.value.trim(),
+        message: messageField.value.trim(),
+        timestamp: new Date().toISOString()
+    };
+
+    try {
+        console.log("⏳ Sending data to Firebase...");
+        const newRef = push(ref(db, "enquiries"));
+        await set(newRef, formData);
+
+        console.log("✅ Data successfully saved:", formData);
+        alert("Message sent successfully!");
+
+        // Reset form & modal
+        modal.classList.remove("active");
+        form.reset();
+    } catch (error) {
+        console.error("❌ Error saving data:", error);
+        alert("Error sending message. Try again later.");
+    }
+
+    isSubmitting = false; // Allow new submissions
+});

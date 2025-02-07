@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Send message to Gemini API
     async function sendToGPT(message) {
-        const API_KEY = 'AIzaSyCxXRBlbLYkQlgYe8n106jP17hTzmChSGg';
+        const API_KEY = 'AIzaSyAZRR5K6LIRu3hE6u3dpz08ZqU_qNvPTts';
         const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
 
         try {
