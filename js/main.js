@@ -93,9 +93,9 @@ const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
 const textArray = [
-    "ComputerScience Student", 
-    "Data Science Enthusiast",
-    "Problem Solver" ,
+    "Jr. Data Scientist", 
+    "AI/GenAI Enthusiast",
+    "Problem Solver",
     "Web Developer"
 ];
 const typingDelay = 100;
